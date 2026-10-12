@@ -1,0 +1,28 @@
+name: 테스트 빌드 제보
+description: 버그, 문장·오타, 밸런스, 의견을 알려 주세요. 게임 안의 "제보하기" 버튼을 쓰면 아래 칸이 자동으로 채워집니다.
+labels: []
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 분류
+      options:
+        - 버그
+        - 문장·오타
+        - 밸런스
+        - 의견
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 내용
+      description: 무엇을 하다가 어떤 일이 있었는지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: 진행 기록
+      description: 게임이 자동으로 채운 기록입니다. 그대로 두셔도 됩니다.
+      render: markdown
